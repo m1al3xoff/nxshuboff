@@ -1,0 +1,74 @@
+---
+const items = [
+  { icon: 'bx bx-category-alt', title: 'Risorse', desc: 'Guide, configurazioni e script per il tuo server.' },
+  { icon: 'bx bx-store', title: 'Shop', desc: 'Negozio ufficiale del server con economia Aurelium.' },
+  { icon: 'bx bx-server', title: 'Server Status', desc: 'Monitoraggio dello stato del server Minecraft.' },
+  { icon: 'bx bxl-discord-alt', title: 'Community', desc: 'Unisciti al server Discord di NXS Informatics.' },
+  { icon: 'bx bx-wallet-alt', title: 'Economia', desc: 'Gestione dell\'economia con plugin Aurelium.' },
+  { icon: 'bx bx-bot', title: 'Strumenti', desc: 'Tool e utility per la gestione del server.' },
+];
+---
+<section>
+  <div class="inner">
+    <h2>Cosa trovi qui</h2>
+    <div class="grid">
+      {items.map((x) => (
+        <a href={x.href || '#'} class="card">
+          <div class="icon"><i class={x.icon}></i></div>
+          <h3>{x.title}</h3>
+          <p>{x.desc}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 3rem 1.5rem 5rem;
+  }
+  .inner { max-width: 1000px; margin: 0 auto; }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    display: block;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: inherit;
+  }
+  .card:hover { border-color: var(--accent); }
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  .card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+  .card p {
+    color: var(--text2);
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+</style>

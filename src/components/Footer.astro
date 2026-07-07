@@ -1,0 +1,71 @@
+---
+const year = new Date().getFullYear();
+---
+<footer>
+  <div class="inner">
+    <div class="grid">
+      <div>
+        <img src="/images/nxsinformatics.png" alt="NXS Informatics" class="flogo" />
+        <p class="desc">NXS Informatics.</p>
+      </div>
+      <div>
+        <h4>Link</h4>
+        <a href="#">Home</a>
+        <a href="#">Risorse</a>
+        <a href="#">Shop</a>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <a href="#"><i class="bx bxl-discord-alt"></i> Discord</a>
+        <a href="#"><i class="bx bxl-github"></i> GitHub</a>
+      </div>
+      <div>
+        <h4>Server</h4>
+        <a href="#"><i class="bx bx-server"></i> Stato Server</a>
+        <a href="#"><i class="bx bx-book-open"></i> Documentazione</a>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; {year} NXS Informatics
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 1.5rem 1.5rem;
+  }
+  .inner { max-width: 1000px; margin: 0 auto; }
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .flogo { height: 32px; margin-bottom: 0.5rem; }
+  .desc { color: var(--text2); font-size: 0.85rem; }
+  h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text2);
+    margin-bottom: 0.5rem;
+  }
+  .grid a {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 0.15rem 0;
+  }
+  .grid a:hover { color: var(--accent); }
+  .bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+    text-align: center;
+    color: var(--text2);
+    font-size: 0.8rem;
+  }
+</style>
